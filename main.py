@@ -1,10 +1,8 @@
 import random
 
-# Startvärdena väljer du själv.
-spelare1_hp = 100
-spelare2_hp = 100
+spelare1_liv = 100
+spelare2_liv = 100
 
-# Ditt första kort börjar här.
 
 Karaktär = int(input(print(""""
 Spelare 1 välg din karaktär
@@ -12,10 +10,9 @@ Spelare 1 välg din karaktär
 klicka 1 för Ninja som använder fötterna bara
 klicka 2 för En tjok sumobrottare
 klicka 3 för En norsk Viking som hoppar i vatten 
-klicka 4 för En Gladiator 
-klicka 5 för Brittisk ganskter med machete
-klicka 6 för En stormtuper
-klicka 7 för Joaquín Archibaldo Guzmán Loera, El Supremo 
+klicka 4 för Brittisk ganskter med machete
+klicka 5 för En stormtuper
+klicka 6 för Joaquín Archibaldo Guzmán Loera, El Supremo 
 """)))
 
 if Karaktär == 1:
@@ -28,15 +25,12 @@ if Karaktär == 3:
     Spelare1 = ("Viking")
 
 if Karaktär == 4:
-    Spelare1 = ("Gladiator")
-
-if Karaktär == 5:
     Spelare1 = ("Gangster")
 
-if Karaktär == 6:
+if Karaktär == 5:
     Spelare1 = ("stormtroper")
 
-if Karaktär == 7:
+if Karaktär == 6:
     Spelare1 = ("Joaquín")
 
 
@@ -46,10 +40,9 @@ Spelare 2 välg din karaktär
 klicka 1 för Ninja som använder fötterna bara
 klicka 2 för En tjok sumobrottare
 klicka 3 för En norsk Viking som hoppar i vatten 
-klicka 4 för En Gladiator 
-klicka 5 för Brittisk ganskter med machete
-klicka 6 för En stormtuper
-klicka 7 för Joaquín Archibaldo Guzmán Loera, El Supremo 
+klicka 4 för Brittisk ganskter med machete
+klicka 5 för En stormtuper
+klicka 6 för Joaquín Archibaldo Guzmán Loera, El Supremo 
 """)))
 
 if Karaktär == 1:
@@ -62,18 +55,27 @@ if Karaktär == 3:
     Spelare2 = ("Viking")
 
 if Karaktär == 4:
-    Spelare2 = ("Gladiator")
-
-if Karaktär == 5:
     Spelare2 = ("Gangster")
 
-if Karaktär == 6:
+if Karaktär == 5:
     Spelare2 = ("stormtroper")
 
-if Karaktär == 7:
+if Karaktär == 6:
     Spelare2 = ("Joaquín")
 
 
 start_val = input(print("Okej spelare 1 är "+ Spelare1 +"och spelare 2 är "+ Spelare2 +" klicka 1 för att starta"))
 if start_val == 1:
-    vem_som_börjar = 
+    tärning = random.randint (1, 2)
+    if tärning == 1:
+        if Spelare1 == "Ninja": 
+            ninja_val1 = input(print("""välj din attack
+klicka 1 för Ninja spark 20-40 skada
+klicka 2 för Kassta kastkärnor 50 att pricka och 30-80 skada
+klicka 3 för Ninja GO 25 chans att lyckas och 85 skada"""))
+            
+
+
+        
+    if tärning == 2:
+        print("spelare 2 börjar")
