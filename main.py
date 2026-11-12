@@ -64,18 +64,21 @@ if Karaktär == 6:
     Spelare2 = ("Joaquín")
 
 
-start_val = input(print("Okej spelare 1 är "+ Spelare1 +"och spelare 2 är "+ Spelare2 +" klicka 1 för att starta"))
-if start_val == 1:
-    tärning = random.randint (1, 2)
-    if tärning == 1:
+start_val = input(print("Okej spelare 1 är "+ Spelare1 + " och spelare 2 är "+ Spelare2 +" klicka 1 för att starta spelare 1 börjar"))
+if start_val == "1":
+        
         if Spelare1 == "Ninja": 
-            ninja_val1 = input(print("""välj din attack
+            ninja_val1 = input(print("""
+              välj din attack
 klicka 1 för Ninja spark 20-40 skada
 klicka 2 för Kassta kastkärnor 50 att pricka och 30-80 skada
 klicka 3 för Ninja GO 25 chans att lyckas och 85 skada"""))
+            if ninja_val1 == "1":
+                skada_ninja_spark = random.randint (20, 40)
+                spelare2_liv - skada_ninja_spark
+                print (spelare2_liv)
+
             
 
 
         
-    if tärning == 2:
-        print("spelare 2 börjar")
