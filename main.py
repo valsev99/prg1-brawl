@@ -73,12 +73,35 @@ if start_val == "1":
 klicka 1 för Ninja spark 20-40 skada
 klicka 2 för Kassta kastkärnor 50 att pricka och 30-80 skada
 klicka 3 för Ninja GO 25 chans att lyckas och 85 skada"""))
+
+#NINJAN
+            
             if ninja_val1 == "1":
                 skada_ninja_spark = random.randint (20, 40)
-                spelare2_liv - skada_ninja_spark
+                spelare2_liv -= skada_ninja_spark
                 print (spelare2_liv)
 
-            
+
+            if ninja_val1 == "2":
+                for_ninja_kastkärnor = random.randint (1, 2)
+                if for_ninja_kastkärnor == 1:
+                    print("attacken mislyckades")
+                if for_ninja_kastkärnor == 2:
+                    skada_ninja_kastkärnor = random.randint (30, 80)
+                    spelare2_liv -= skada_ninja_kastkärnor
+                print("attacken lyckades du tog " + str(skada_ninja_kastkärnor) + " skada")
 
 
-        
+            if ninja_val1 == "3":
+                for_ninjaGO = random.randint (1, 4)
+                if for_ninjaGO != 4:
+                    print("attacken misslyckades")
+                    
+                elif for_ninjaGO == 4:
+                        spelare2_liv -= 85
+                        print("""
+                        
+                        attacken lyckades do tog 85 skada
+                        spelare 2 har """ + str(spelare2_liv) + """ liv kvar
+                        """)
+
