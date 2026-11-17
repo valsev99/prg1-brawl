@@ -92,7 +92,8 @@ klicka 3 för Ninja GO 25% chans att lyckas och 85 skada"""))
                         """)
 
 #GANGSTER
-
+skada_slåmedhand = 400
+Gangster_val_attack=233
 if Spelare1 == "Gangster":
     Gangster_val_attack = input(print("""
                 Välj din attack
@@ -125,3 +126,39 @@ if Gangster_val_attack == "3":
 print((f"du tog {skada_slåmedhand} spelare 2 har {spelare2_liv} liv kvar"))
 
 
+#STROMTROPER
+
+stormtroper_val=333
+if Spelare1 == "stormtroper": 
+            stormtroper_val = input(print("""
+              välj din attack
+klicka 1 för att sjuta du har 1 i 100 att pricka
+klicka 2 för att ge up"""))
+
+if stormtroper_val == "1":
+     stormtroper_chans = random.randint (1, 100)
+     if stormtroper_chans == 67:
+          print("Du lyckades pricka du van")
+     else:
+          print("Du missade")
+
+elif stormtroper_val == "2":
+     ge_up_stormtruper = random.randint (1, 2)
+     if ge_up_stormtruper == 1:
+        print("du försökte sjuta dig själv men du missa så du är fortfarande inne")
+     else:
+          print("du gav up")
+
+
+#JOAQIM
+
+if Spelare1 == "Joaquín":
+     joaquin_attack_val = input(print("""
+        välj din attack
+klicka 1 för att slå med armbågen 20-40 skada
+klicka 1 för att kassta stark sås 50% chans att lyckas 60 skada
+klicka 1 för att hoppa från en byggnad med armbågen 25% chans att lyckas 45-100 skada"""))
+     if joaquin_attack_val == "1":
+          joaquin_armbåg_skada = random.randint (20, 40)
+          spelare2_liv -= joaquin_armbåg_skada
+          print("Du tog " + str(joaquin_armbåg_skada) + " skada spelare 2 har " + str(spelare2_liv) + " kvar")
