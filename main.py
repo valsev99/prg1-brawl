@@ -5,62 +5,48 @@ spelare2_liv = 100
 
 
 Karaktär = int(input(print(""""
+
 Spelare 1 välg din karaktär
 
 klicka 1 för Ninja som använder fötterna bara
-klicka 2 för En tjok sumobrottare
-klicka 3 för En norsk Viking som hoppar i vatten 
-klicka 4 för Brittisk ganskter med machete
-klicka 5 för En stormtuper
-klicka 6 för Joaquín Archibaldo Guzmán Loera, El Supremo 
+klicka 2 för Brittisk ganskter med machete
+klicka 3 för En stormtuper
+klicka 4 för Joaquín Archibaldo Guzmán Loera, El Supremo 
 """)))
 
 if Karaktär == 1:
     Spelare1 = ("Ninja")
 
 if Karaktär == 2:
-    Spelare1 = ("sumobrottare")
-
-if Karaktär == 3:
-    Spelare1 = ("Viking")
-
-if Karaktär == 4:
     Spelare1 = ("Gangster")
 
-if Karaktär == 5:
+if Karaktär == 3:
     Spelare1 = ("stormtroper")
 
-if Karaktär == 6:
+if Karaktär == 4:
     Spelare1 = ("Joaquín")
 
 
 Karaktär = int(input(print(""""
+
 Spelare 2 välg din karaktär
 
 klicka 1 för Ninja som använder fötterna bara
-klicka 2 för En tjok sumobrottare
-klicka 3 för En norsk Viking som hoppar i vatten 
-klicka 4 för Brittisk ganskter med machete
-klicka 5 för En stormtuper
-klicka 6 för Joaquín Archibaldo Guzmán Loera, El Supremo 
+klicka 2 för Brittisk ganskter med machete
+klicka 3 för En stormtuper
+klicka 4 för Joaquín Archibaldo Guzmán Loera, El Supremo 
 """)))
 
 if Karaktär == 1:
     Spelare2 = ("Ninja")
 
 if Karaktär == 2:
-    Spelare2 = ("sumobrottare")
-
-if Karaktär == 3:
-    Spelare2 = ("Viking")
-
-if Karaktär == 4:
     Spelare2 = ("Gangster")
 
-if Karaktär == 5:
+if Karaktär == 3:
     Spelare2 = ("stormtroper")
 
-if Karaktär == 6:
+if Karaktär == 4:
     Spelare2 = ("Joaquín")
 
 
@@ -71,8 +57,8 @@ if start_val == "1":
             ninja_val1 = input(print("""
               välj din attack
 klicka 1 för Ninja spark 20-40 skada
-klicka 2 för Kassta kastkärnor 50 att pricka och 30-80 skada
-klicka 3 för Ninja GO 25 chans att lyckas och 85 skada"""))
+klicka 2 för Kassta kastkärnor 50% att pricka och 30-80 skada
+klicka 3 för Ninja GO 25% chans att lyckas och 85 skada"""))
 
 #NINJAN
             
@@ -97,11 +83,45 @@ klicka 3 för Ninja GO 25 chans att lyckas och 85 skada"""))
                 if for_ninjaGO != 4:
                     print("attacken misslyckades")
                     
-                elif for_ninjaGO == 4:
+                else:
                         spelare2_liv -= 85
                         print("""
                         
                         attacken lyckades do tog 85 skada
                         spelare 2 har """ + str(spelare2_liv) + """ liv kvar
                         """)
+
+#GANGSTER
+
+if Spelare1 == "Gangster":
+    Gangster_val_attack = input(print("""
+                Välj din attack
+klicka 1 för slå med machete 75% chans at lyckas 30-45 skada
+klicka 2 för ring roadman 10% chans att lyckas 100 skada
+klicka 3 för slå med hand 15-30 skada"""))
+
+    
+    if Gangster_val_attack == "1":
+        for_gangster_machete = random.randint (1,4)
+        if for_gangster_machete == 1:
+            print("attacken misslyckades")
+        else:
+            gangster_machete_skada = random.randint (30, 45)
+            spelare2_liv -= gangster_machete_skada
+            print("attacken lyckades du tog " + str(gangster_machete_skada) + " skada spelare 2 har " + str(spelare2_liv) + " kvar")
+
+
+if Gangster_val_attack == "2":
+    for_rodeman = random.randint (1, 10)
+    if for_rodeman == 1:
+        print("attacken lyckades spelare 1 van")
+    else:
+        print("attacken mislyckades")
+
+
+if Gangster_val_attack == "3":
+    skada_slåmedhand = random.randint (15, 30)
+    spelare2_liv -= skada_slåmedhand
+print((f"du tog {skada_slåmedhand} spelare 2 har {spelare2_liv} liv kvar"))
+
 
