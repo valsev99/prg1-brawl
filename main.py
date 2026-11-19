@@ -61,24 +61,28 @@ klicka 2 för Kassta kastkärnor 50% att pricka och 30-80 skada
 klicka 3 för Ninja GO 25% chans att lyckas och 85 skada"""))
 
 #NINJAN
+
+skada_ninja_kastkärnor = 13123
+skada_ninja_spark = 14913
+
             
-            if ninja_val1 == "1":
+if ninja_val1 == "1":
                 skada_ninja_spark = random.randint (20, 40)
                 spelare2_liv -= skada_ninja_spark
-                print (spelare2_liv)
+                print((f"du tog {spelare2_liv} skada på spelare 2 har {spelare2_liv} liv kvar"))
 
 
-            if ninja_val1 == "2":
+if ninja_val1 == "2":
                 for_ninja_kastkärnor = random.randint (1, 2)
                 if for_ninja_kastkärnor == 1:
                     print("attacken mislyckades")
                 if for_ninja_kastkärnor == 2:
                     skada_ninja_kastkärnor = random.randint (30, 80)
                     spelare2_liv -= skada_ninja_kastkärnor
-                print("attacken lyckades du tog " + str(skada_ninja_kastkärnor) + " skada")
+                print(f"attacken lyckades du tog {skada_ninja_kastkärnor} skada spelare 2 har {spelare2_liv} liv kvar")
 
 
-            if ninja_val1 == "3":
+if ninja_val1 == "3":
                 for_ninjaGO = random.randint (1, 4)
                 if for_ninjaGO != 4:
                     print("attacken misslyckades")
@@ -152,13 +156,42 @@ elif stormtroper_val == "2":
 
 #JOAQIM
 
+
+joaquin_armbåghopp_skada = 113
+joaquin_armbåg_skada = 222
+joaquin_attack_val = 444
+joaquin_sås_skada = 13
+for_joaquin_armbågehopp = 123
+for_joaquin_sås = 123123
+
+
 if Spelare1 == "Joaquín":
      joaquin_attack_val = input(print("""
         välj din attack
 klicka 1 för att slå med armbågen 20-40 skada
-klicka 1 för att kassta stark sås 50% chans att lyckas 60 skada
-klicka 1 för att hoppa från en byggnad med armbågen 25% chans att lyckas 45-100 skada"""))
+klicka 2 för att kassta stark sås 50% chans att lyckas 40-60 skada
+klicka 3 för att hoppa från en byggnad med armbågen 25% chans att lyckas 45-100 skada"""))
      if joaquin_attack_val == "1":
           joaquin_armbåg_skada = random.randint (20, 40)
           spelare2_liv -= joaquin_armbåg_skada
-          print("Du tog " + str(joaquin_armbåg_skada) + " skada spelare 2 har " + str(spelare2_liv) + " kvar")
+          print("Du tog " + str(joaquin_armbåg_skada) + " skada på spelare 2 har " + str(spelare2_liv) + " liv kvar")
+
+
+if joaquin_attack_val == "2":
+        for_joaquin_sås = random.randint (1, 2)
+        if for_joaquin_sås == 1:
+             print("attacken misslyckades")
+        else:
+             joaquin_sås_skada = random.randint (40, 60)
+        spelare2_liv -= joaquin_sås_skada
+        print("du tog " + str(joaquin_sås_skada) + " skada på sperare 2 har " + str(spelare2_liv) + " liv kvar")
+
+if joaquin_attack_val == "3":
+     for_joaquin_armbågehopp = random.randint (1, 4)
+     if for_joaquin_armbågehopp == 1:
+          joaquin_armbåghopp_skada = random.randint (45, 100)
+          spelare2_liv -= joaquin_armbåghopp_skada
+          print("Du tog " + str(joaquin_armbåghopp_skada) + " skada på spelare 2 har " + str(spelare2_liv) + " liv kvar")
+if for_joaquin_armbågehopp != 1:
+        print("Attacken Misllyckades")
+     
