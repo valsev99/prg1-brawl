@@ -24,15 +24,14 @@ rubrikerna längst ner i readme.md. faser.md fylls i längs vägen och blir klar
 spelaren väljer varje tur, minst två alternativ som du hittar på. Kraschsäkert: katt ger en ny fråga. Dela upp det
 <!-- priority: high -->
 
-#### fixa attckerna
-<!-- id: task-1794910472167-84 -->
-till alla karaktärer
-<!-- priority: high -->
-
 #### Krav: kampen
 <!-- id: task-1793100000003-3 -->
 båda slår med slumpad skada tills någon har noll HP, i en while med and. En besegrad slår inte tillbaka. Vinnaren skrivs ut. Dela upp det
 <!-- priority: high -->
+
+#### göra så att spelare 2 fungerar
+<!-- id: task-1795512992172-48 -->
+<!-- workload: extreme -->
 
 ## Done
 
@@ -45,6 +44,11 @@ forka och klona repot, öppna det i VS Code
 planering.md: ditt spel, planen och dina kort. Lägg in korten här. Visa läraren innan du skriver kod
 <!-- priority: critical -->
 <!-- source: planering.md:1 -->
+
+#### fixa attckerna
+<!-- id: task-1794910472167-84 -->
+till alla karaktärer
+<!-- priority: high -->
 
 #### Krav: spelet börjar
 <!-- id: task-1793100000002-2 -->
